@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/subscriptionSSO/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.subscriptionSSO.name">Subscription SSO Plugin</message>
+	<message key="plugins.generic.subscriptionSSO.description">This plugin delegates subscription checking to an external system for SSO (Single Sign On)-like behavior. When a request comes to OJS with the incoming parameter name specified -- this should be a parameter that OJS does not use internally -- the plugin will contact the verification URL with the value of the parameter appended. If the remove service's result matches the specified regular expression, the user will be considered valid. If not, the user will be redirected to the specified URL.</message>
+	<message key="plugins.generic.subscriptionSSO.settings">Settings</message>
+	<message key="plugins.generic.subscriptionSSO.subscriptionSSOSettings">Subscription Single Sign-On Settings</message>
+	<message key="plugins.generic.subscriptionSSO.settings.description">Use the following form to configure the external service that will provide confirmation of subscription status to OJS's subscription content.</message>
+	<message key="plugins.generic.subscriptionSSO.settings.incomingParameterName">Incoming parameter name</message>
+	<message key="plugins.generic.subscriptionSSO.settings.incomingParameterName.required">The incoming parameter name is required and must contain only alphanumeric characters.</message>
+	<message key="plugins.generic.subscriptionSSO.settings.verificationUrl">Verification URL</message>
+	<message key="plugins.generic.subscriptionSSO.settings.verificationUrl.required">The verification URL is required and must contain a valid URL.</message>
+	<message key="plugins.generic.subscriptionSSO.settings.resultRegexp">Verification Regular Expression</message>
+	<message key="plugins.generic.subscriptionSSO.settings.resultRegexp.required">The verification regular expression is a required field and must contain a valid regular expression.</message>
+	<message key="plugins.generic.subscriptionSSO.settings.redirectUrl">Redirect URL</message>
+	<message key="plugins.generic.subscriptionSSO.settings.redirectUrl.required">The redirect URL is required and must contain a valid URL.</message>
+	<message key="plugins.generic.subscriptionSSO.settings.hoursValid">Hours Valid</message>
+	<message key="plugins.generic.subscriptionSSO.settings.hoursValid.required">The maximum number of hours the session is valid must be an integer.</message>
+</locale>
