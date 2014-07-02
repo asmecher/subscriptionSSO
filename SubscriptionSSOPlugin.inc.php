@@ -77,9 +77,16 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 * @return boolean Hook return status
 	 */
 	function subscribedUserCallback($hookName, $args) {
+		// Exclude the index and issue pages.
+		if (in_array(Request::getRequestedPage(), array('', 'index', 'issue'))) return false;
+
 		$journal =& $args[0];
 		$result =& $args[1]; // Reference required
 		$result = isset($_SESSION['subscriptionSSOTimestamp']) && $_SESSION['subscriptionSSOTimestamp'] + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) < time();
+		if (!$result) {
+			// If we're not subscribed, redirect.
+			Request::redirectURL($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode(Request::getRequestUrl()));
+		}
 	}
 
 	/**
