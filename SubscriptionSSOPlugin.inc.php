@@ -78,7 +78,11 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 */
 	function subscribedUserCallback($hookName, $args) {
 		// Exclude the index and issue pages.
-		if (in_array(Request::getRequestedPage(), array('', 'index', 'issue'))) return false;
+		if (in_array(Request::getRequestedPage(), array('', 'index', 'issue', 'search'))) return false;
+
+		// Permit an abstract view.
+		if (Request::getRequestedPage() == 'article' && Request::getRequestedOp() == 'view' && count(Request::getRequestedArgs())==1) return false;
+
 		$journal =& $args[0];
 		$result =& $args[1]; // Reference required
 		$result = isset($_SESSION['subscriptionSSOTimestamp']) && $_SESSION['subscriptionSSOTimestamp'] + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) > time();
