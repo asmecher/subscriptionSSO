@@ -1,17 +1,13 @@
 {**
  * plugins/generic/subscriptionSSO/settingsForm.tpl
  *
- * Copyright (c) 2014 Simon Fraser University Library
- * Copyright (c) 2014 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2014-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
  *
  * Subscription SSO plugin settings
  *
  *}
-{strip}
-{assign var="pageTitle" value="plugins.generic.subscriptionSSO.subscriptionSSOSettings"}
-{include file="common/header.tpl"}
-{/strip}
 <div id="subscriptionSSOSettings">
 <div id="description">{translate key="plugins.generic.subscriptionSSO.settings.description"}</div>
 
@@ -19,37 +15,27 @@
 
 <br />
 
-<form method="post" action="{plugin_url path="settings"}">
-{include file="common/formErrors.tpl"}
+<script>
+	$(function() {ldelim}
+		// Attach the form handler.
+		$('#subscriptionSSOSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+	{rdelim});
+</script>
+<form class="pkp_form" method="post" id="subscriptionSSOSettingsForm" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
+	{csrf}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="40%" class="label">{fieldLabel name="incomingParameterName" required="true" key="plugins.generic.subscriptionSSO.settings.incomingParameterName"}</td>
-		<td width="60%" class="value"><input type="text" name="incomingParameterName" id="incomingParameterName" value="{$incomingParameterName|escape}" size="15" maxlength="25" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="verificationUrl" required="true" key="plugins.generic.subscriptionSSO.settings.verificationUrl"}</td>
-		<td class="value"><input type="text" name="verificationUrl" id="verificationUrl" value="{$verificationUrl|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="resultRegexp" required="true" key="plugins.generic.subscriptionSSO.settings.resultRegexp"}</td>
-		<td class="value"><input type="text" name="resultRegexp" id="resultRegexp" value="{$resultRegexp|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="redirectUrl" required="true" key="plugins.generic.subscriptionSSO.settings.redirectUrl"}</td>
-		<td class="value"><input type="text" name="redirectUrl" id="redirectUrl" value="{$redirectUrl|escape}" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="hoursValid" required="true" key="plugins.generic.subscriptionSSO.settings.hoursValid"}</td>
-		<td class="value"><input type="text" name="hoursValid" id="hoursValid" value="{$hoursValid|escape}" size="15" maxlength="25" class="textField" /></td>
-	</tr>
-</table>
+	{fbvFormArea id="ssoSettingsFormArea"}
+		{fbvFormSection}
+			{fbvElement type="text" id="incomingParameterName" name="incomingParameterName" value=$incomingParameterName label="plugins.generic.subscriptionSSO.settings.incomingParameterName" required=true}
+			{fbvElement type="text" id="verificationUrl" name="verificationUrl" value=$verificationUrl label="plugins.generic.subscriptionSSO.settings.verificationUrl" required=true}
+			{fbvElement type="text" id="resultRegexp" name="resultRegexp" value=$resultRegexp label="plugins.generic.subscriptionSSO.settings.resultRegexp" required=true}
+			{fbvElement type="text" id="redirectUrl" name="redirectUrl" value=$redirectUrl label="plugins.generic.subscriptionSSO.settings.redirectUrl" required=true}
+			{fbvElement type="text" id="hoursValid" name="hoursValid" value=$hoursValid label="plugins.generic.subscriptionSSO.settings.hoursValid" required=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
-<br/>
-
-<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/><input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
+	{fbvFormButtons}
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </div>
-{include file="common/footer.tpl"}

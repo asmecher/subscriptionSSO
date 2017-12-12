@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/subscriptionSSO/SubscriptionSSOSettingsForm.inc.php
  *
- * Copyright (c) 2014 Simon Fraser University Library
- * Copyright (c) 2014 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2014-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
  *
  * @class SubscriptionSSOSettingsForm
@@ -18,24 +18,24 @@ import('lib.pkp.classes.form.Form');
 
 class SubscriptionSSOSettingsForm extends Form {
 
-	/** @var $journalId int */
-	var $journalId;
+	/** @var int */
+	var $_journalId;
 
-	/** @var $plugin object */
-	var $plugin;
+	/** @var GenericPlugin */
+	var $_plugin;
 
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function SubscriptionSSOSettingsForm(&$plugin, $journalId) {
-		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+	function __construct($plugin, $journalId) {
+		$this->_journalId = $journalId;
+		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidatorAlphaNum($this, 'incomingParameterName', 'required', 'plugins.generic.subscriptionSSO.settings.incomingParameterName.required'));
+		$this->addCheck(new FormValidatorRegExp($this, 'incomingParameterName', 'required', 'plugins.generic.subscriptionSSO.settings.incomingParameterName.required', '/^[a-zA-Z0-9\/._-]+$/'));
 		$this->addCheck(new FormValidatorURL($this, 'verificationUrl', 'required', 'plugins.generic.subscriptionSSO.settings.verificationUrl.required'));
 		$this->addCheck(new FormValidator($this, 'resultRegexp', 'required', 'plugins.generic.subscriptionSSO.settings.resultRegexp.required'));
 		$this->addCheck(new FormValidatorURL($this, 'redirectUrl', 'required', 'plugins.generic.subscriptionSSO.settings.redirectUrl.required'));
@@ -47,8 +47,8 @@ class SubscriptionSSOSettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin = $this->_plugin;
 
 		$this->_data = array(
 			'incomingParameterName' => $plugin->getSetting($journalId, 'incomingParameterName'),
@@ -67,11 +67,21 @@ class SubscriptionSSOSettingsForm extends Form {
 	}
 
 	/**
+	 * Fetch the form.
+	 * @copydoc Form::fetch()
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('pluginName', $this->_plugin->getName());
+		return parent::fetch($request);
+	}
+
+	/**
 	 * Save settings.
 	 */
 	function execute() {
-		$plugin =& $this->plugin;
-		$journalId = $this->journalId;
+		$plugin = $this->_plugin;
+		$journalId = $this->_journalId;
 
 		$plugin->updateSetting($journalId, 'incomingParameterName', $this->getData('incomingParameterName'), 'string');
 		$plugin->updateSetting($journalId, 'verificationUrl', $this->getData('verificationUrl'), 'string');
