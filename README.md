@@ -1,7 +1,7 @@
 subscriptionSSO
 ===============
 
-Subscription SSO (single-sign-on) plugin for OJS 2.x.
+Subscription SSO (single-sign-on) plugin for OJS 3.x.
 
 This plugin permits delegation of OJS subscription checks to a third-party
 web service. The plugin requires the following configuration parameters:
