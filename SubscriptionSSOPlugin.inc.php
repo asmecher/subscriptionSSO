@@ -41,6 +41,8 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	function loadHandlerCallback($hookName, $args) {
 		$request = Application::getRequest();
 		$journal = $request->getJournal();
+		if (!$journal) return false;
+
 		$incomingParameterName = $this->getSetting($journal->getId(), 'incomingParameterName');
 		// Using $_GET rather than Request because this may be case
 		// sensitive (e.g. differentiating myid from myId)
