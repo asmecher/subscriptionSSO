@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/subscriptionSSO/SubscriptionSSOPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2014-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2014-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
  *
  * @package plugins_generic_subscriptionSSO
@@ -101,7 +101,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 * @param $params array
 	 * @param $smarty Smarty
 	 */
-	function smartyPluginUrl($params, &$smarty) {
+	function smartyPluginUrl($params, $smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
 			$params['path'] = array_merge($path, $params['path']);
