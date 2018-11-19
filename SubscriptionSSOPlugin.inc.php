@@ -180,4 +180,3 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	}
 }
 
-?>

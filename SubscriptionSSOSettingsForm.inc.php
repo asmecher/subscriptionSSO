@@ -91,4 +91,3 @@ class SubscriptionSSOSettingsForm extends Form {
 	}
 }
 
-?>

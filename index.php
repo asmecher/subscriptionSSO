@@ -20,4 +20,3 @@ require_once('SubscriptionSSOPlugin.inc.php');
 
 return new SubscriptionSSOPlugin();
 
-?>
