@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/subscriptionSSO/SubscriptionSSOPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2014-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2014-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
  *
  * @package plugins_generic_subscriptionSSO
@@ -19,8 +19,8 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	/**
 	 * @copydoc GenericPlugin::register
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			$this->addLocaleData();
@@ -94,28 +94,6 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 			// If we're not subscribed, redirect.
 			$request->redirectURL($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl()));
 		}
-	}
-
-	/**
-	 * Extend the {url ...} smarty to support this plugin.
-	 * @param $params array
-	 * @param $smarty Smarty
-	 */
-	function smartyPluginUrl($params, $smarty) {
-		$path = array($this->getCategory(), $this->getName());
-		if (is_array($params['path'])) {
-			$params['path'] = array_merge($path, $params['path']);
-		} elseif (!empty($params['path'])) {
-			$params['path'] = array_merge($path, array($params['path']));
-		} else {
-			$params['path'] = $path;
-		}
-
-		if (!empty($params['id'])) {
-			$params['path'] = array_merge($params['path'], array($params['id']));
-			unset($params['id']);
-		}
-		return $smarty->smartyUrl($params, $smarty);
 	}
 
 	/**
