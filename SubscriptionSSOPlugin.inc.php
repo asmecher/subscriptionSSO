@@ -39,7 +39,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 * @return boolean Hook return status
 	 */
 	function loadHandlerCallback($hookName, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		if (!$journal) return false;
 
@@ -81,7 +81,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 */
 	function subscribedUserCallback($hookName, $args) {
 		// Exclude the index and issue pages.
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if (in_array($request->getRequestedPage(), array('', 'index', 'issue', 'search'))) return false;
 
 		// Permit an abstract view.
