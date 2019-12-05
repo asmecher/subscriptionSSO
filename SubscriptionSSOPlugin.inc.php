@@ -82,7 +82,9 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	function subscribedUserCallback($hookName, $args) {
 		// Exclude the index and issue pages.
 		$request = Application::get()->getRequest();
-		if (in_array($request->getRequestedPage(), array('', 'index', 'issue', 'search'))) return false;
+		if (in_array($request->getRequestedPage(), array('', 'index', 'search'))) return false;
+		// Capture issue galley requests, but not e.g. issue archive
+		if ($request->getRequestedPage() == 'issue' && count($request->getRequestedArgs()) != 2) return false;
 
 		// Permit an abstract view.
 		if ($request->getRequestedPage() == 'article' && $request->getRequestedOp() == 'view' && count($request->getRequestedArgs())==1) return false;
