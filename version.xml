@@ -2,19 +2,19 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/generic/subscriptionSSO/version.xml
+  * version.xml
   *
-  * Copyright (c) 2014-2019 Simon Fraser University
-  * Copyright (c) 2014-2019 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file COPYING.
+  * Copyright (c) 2014-2020 Simon Fraser University
+  * Copyright (c) 2014-2020 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
   *
   * Plugin version information.
   -->
 <version>
 	<application>subscriptionSSO</application>
 	<type>plugins.generic</type>
-	<release>1.0.2.0</release>
-	<date>2019-03-04</date>
+	<release>1.0.3.0</release>
+	<date>2020-03-19</date>
 	<lazy-load>1</lazy-load>
 	<class>SubscriptionSSOPlugin</class>
 </version>
