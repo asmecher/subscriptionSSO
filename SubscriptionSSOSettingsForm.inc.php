@@ -1,18 +1,15 @@
 <?php
 
 /**
- * @file plugins/generic/subscriptionSSO/SubscriptionSSOSettingsForm.inc.php
+ * @file SubscriptionSSOSettingsForm.inc.php
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2014-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file COPYING.
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2014-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * @class SubscriptionSSOSettingsForm
- * @ingroup plugins_generic_subscriptionSSO
- *
  * @brief Form for journal managers to modify subscription SSO plugin settings
  */
-
 
 import('lib.pkp.classes.form.Form');
 

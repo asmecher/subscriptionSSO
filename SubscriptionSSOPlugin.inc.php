@@ -1,16 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/subscriptionSSO/SubscriptionSSOPlugin.inc.php
+ * @file SubscriptionSSOPlugin.inc.php
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2014-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file COPYING.
- *
- * @package plugins_generic_subscriptionSSO
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2014-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * Plugin to defer subscription checks to an external system.
- *
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
@@ -66,7 +63,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 			} else {
 				// Failed to validate.
 				unset($_SESSION['subscriptionSSOTimestamp']);
-				$request->redirectURL($this->getSetting($journal->getId(), 'redirectUrl'));
+				$request->redirectUrl($this->getSetting($journal->getId(), 'redirectUrl'));
 			}
 		}
 		return false;
@@ -94,7 +91,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		$result = isset($_SESSION['subscriptionSSOTimestamp']) && $_SESSION['subscriptionSSOTimestamp'] + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) > time();
 		if (!$result) {
 			// If we're not subscribed, redirect.
-			$request->redirectURL($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl()));
+			$request->redirectUrl($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl()));
 		}
 	}
 
