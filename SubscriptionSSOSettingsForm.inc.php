@@ -64,19 +64,18 @@ class SubscriptionSSOSettingsForm extends Form {
 	}
 
 	/**
-	 * Fetch the form.
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
-	 * Save settings.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$plugin = $this->_plugin;
 		$journalId = $this->_journalId;
 
@@ -85,6 +84,8 @@ class SubscriptionSSOSettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'resultRegexp', $this->getData('resultRegexp'), 'string');
 		$plugin->updateSetting($journalId, 'redirectUrl', $this->getData('redirectUrl'), 'string');
 		$plugin->updateSetting($journalId, 'hoursValid', $this->getData('hoursValid'), 'string');
+
+		parent::execute(...$functionArgs);
 	}
 }
 
