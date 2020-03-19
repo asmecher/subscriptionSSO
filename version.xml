@@ -13,7 +13,7 @@
 <version>
 	<application>subscriptionSSO</application>
 	<type>plugins.generic</type>
-	<release>1.0.3.0</release>
+	<release>1.0.3.1</release>
 	<date>2020-03-19</date>
 	<lazy-load>1</lazy-load>
 	<class>SubscriptionSSOPlugin</class>
