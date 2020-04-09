@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-31 20:37+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Ce plugiciel délègue la vérification de l'abonnement à un système externe "
+"suivant une authentification unique de type « Single Sign On » . Lorsqu'une "
+"demande parvient à OJS avec le nom du paramètre entrant spécifié - il doit "
+"par ailleurs s'agir d'un paramètre que OJS n'utilise pas en interne - le "
+"plugiciel contactera l'URL de vérification en y concaténant la valeur du "
+"paramètre.\n"
+"Si le résultat du service distant correspond à l'expression régulière "
+"spécifiée, l'utilisateur-trice sera considéré-e comme valide. Sinon, l"
+"'utilisateur-trice sera redirigé-e vers l'URL spécifiée."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Nombre d'heures de validité"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "L'URL de redirection est obligatoire et doit contenir un URL valide."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL de redirection"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Expression régulière de vérification"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"L'expression régulière de vérification est un champ obligatoire et doit "
+"contenir une expression régulière valide."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "L'URL de vérification est obligatoire et doit contenir un URL valide."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL de vérification"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Le nom du paramètre entrant est obligatoire et ne peut contenir que des "
+"caractères alphanumériques."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nom du paramètre entrant"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Utiliser le formulaire suivant pour configurer le service externe qui "
+"fournira une confirmation du statut d'abonnement au contenu souscrit d'OJS."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Plugiciel d'abonnement par authentification unique (Single Sign-On)"
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Paramètres de l'abonnement par authentification unique (Single Sign-On)"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"Le nombre maximal d'heures de validité de la session doit être un entier."
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Paramètres"
