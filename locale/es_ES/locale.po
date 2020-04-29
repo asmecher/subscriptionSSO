@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-21 16:37+0000\n"
+"PO-Revision-Date: 2020-04-30 12:38+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/plugins/"
-"subscription-sso-plugin/es/>\n"
+"subscription-sso-plugin/es_ES/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,3 +22,52 @@ msgstr "Ajustes"
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "Módulo de suscripción SSO"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"La expresión regular de verificación es un campo obligatorio y debe contener "
+"una expresión regular válida."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Expresión regular de verificación"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Este módulo delega la comprobación de la suscripción a un sistema externo "
+"del tipo autenticación única (SSO - Single Sign On). Cuando llega una "
+"solicitud a OJS con el nombre del parámetro entrante especificado —debería "
+"ser un parámetro que OJS no utilice internamente—, el módulo contactará con "
+"la URL de verificación con el valor del parámetro adjunto. Si el resultado "
+"del servicio remoto coincide con la expresión regular especificada, el "
+"usuario/a será considerado válido. Si no, el usuario/a será redirigido a la "
+"URL especificada."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"El número máximo de horas que la sesión es válida debe ser un número entero."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Horas válidas"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "La URL de redirección es obligatoria y debe contener una URL válida."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL de redirección"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "La URL de verificación es obligatoria y debe contener una URL válida."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL de verificación"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"El nombre del parámetro entrante es obligatorio y debe contener únicamente "
+"caracteres alfanuméricos."
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Utilice el siguiente formulario para configurar el servicio externo que "
+"proporcionará la confirmación del estado de la suscripción en el contenido "
+"de suscripción de OJS."
