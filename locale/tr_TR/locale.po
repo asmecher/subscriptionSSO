@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-06-12 09:39+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/tr_TR/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Oturumun geçerli olabileceği maksimum saat bir tamsayı olmalıdır."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Geçerli Saatler"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "Yönlendirme URL'si zorunludur ve geçerli bir URL olmalıdır."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Yönlendirme URL'si"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Doğrulama düzenli ifadesi zorunlu bir alandır ve geçerli bir düzenli ifade "
+"olmalıdır."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Doğrulama Düzenli İfadesi"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "Doğrulama URL'si zorunlu ve geçerli bir URL olmalıdır."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "Doğrulama URL'si"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Gelen parametre adı zorunludur ve yalnızca alfanumerik karakterlerden "
+"oluşmalıdır."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Gelen parametre adı"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"OJS'nin abonelik içeriğine abonelik onayı sağlayacak harici hizmeti "
+"yapılandırmak için aşağıdaki formu kullanın."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Tek Oturum Açma Abonelik Ayarları"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Bu eklenti, SSO (Tek Oturum Açma) benzeri şekilde abonelik denetimini harici "
+"bir sisteme devreder. Gelen parametre adı belirtilmiş bir istek OJS'e "
+"geldiğinde - bu, OJS'nin dahili olarak kullanmadığı bir parametre olmalıdır -"
+" eklenti, eklenen parametrenin değeri doğrulama URL'siyle iletişim kurar. "
+"Uzak hizmetin sonucu belirtilen normal ifadeyle eşleşirse, kullanıcı geçerli "
+"kabul edilir. Aksi takdirde, kullanıcı belirtilen URL'ye yönlendirilir."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Tek Oturum Abonelik Eklentisi"
