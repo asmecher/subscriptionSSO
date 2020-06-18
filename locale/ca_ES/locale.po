@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-13 11:39+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/ca_ES/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"El nombre màxim d'hores que la sessió és vàlida ha de ser un nombre enter."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Hores vàlides"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "L'URL de redireccionament és obligatori i ha de contenir un URL vàlid."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL de redireccionament"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"L'expressió regular de verificació és un camp obligatori i ha de contenir "
+"una expressió regular vàlida."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Expressió regular de verificació"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "L'URL de verificació és obligatori i ha de contenir un URL vàlid."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL de verificació"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"El nom del paràmetre entrant és obligatori i només pot contenir caràcters "
+"alfanumèrics."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nom del paràmetre entrant"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Feu servir el següent formulari per configurar el servei extern que "
+"proporcionarà la confirmació de l'estat de la subscripció en el contingut de "
+"subscripció d'OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Configuració de la subscripció d'autenticació única"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Configuració"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Aquest mòdul delega la comprovació de la subscripció a un sistema extern del "
+"tipus autenticació única SSO (Single Sign On). Quan arribi una sol·licitud a "
+"OJS amb el nom del paràmetre entrant especificat —hauria de ser un paràmetre "
+"que OJS no usi internament—, el mòdul contactarà amb l'URL de verificació "
+"amb el valor del paràmetre adjunt. Si el resultat del servei remot "
+"coincideix amb l'expressió regular especificada, l'usuari/ària es "
+"considerarà vàlid. En cas contrari, l'usuari/ària serà redirigit cap a l'URL "
+"especificada."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Mòdul de subscripció SSO"
