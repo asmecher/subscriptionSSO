@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-23 06:47+0000\n"
+"PO-Revision-Date: 2020-07-25 07:47+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/cs/>\n"
@@ -16,3 +16,54 @@ msgstr "Nastavení"
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "Plugin externího ověřování SSO"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Maximální počet hodin platnosti ověření – je třeba zadat celé číslo."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Hodiny platnosti"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "URL přesměrování musí být zadáno a musí obsahovat platnou URL adresu."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL přesměrování"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Regulární ověřovací výraz musí být zadán a musí obsahovat platný regulární "
+"výraz."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Regulární výraz ověření"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "Ověřovací URL musí být zadáno a musí obsahovat platnou URL adresu."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Jméno vstupního parametru je požadováno a smí obsahovat pouze alfanumerické "
+"znaky."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Jméno vstupního parametru"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Následující formulář použijte k nastavení externí služby, která bude "
+"poskytovat potvrzení stavu předplatného pro předplatné obsahu OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Nastavení SSO (Single Sign-On) předplatného"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Tento plugin deleguje kontrolu údajů o předplatném na externí systém s SSO ("
+"Single Sign On). Pokud vznikne přihlašovací požadavek na OJS  s parametrem, "
+"který OJS nepoužívá interně , pak plugin kontaktuje ověřovací URL s "
+"hodnotou, přiřazenou tomuto parametru. Pokud vzdálená služba odsouhlasí tyto "
+"parametry, uživatel bude ověřen. Pokud ne, bude uživatel přesměrován na "
+"specifickou URL adresu."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "Ověřovací URL"
