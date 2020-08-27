@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-11 18:40+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "URL xác thực là bắt buộc và phải chứa một URL hợp lệ."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Tên tham số đến"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL xác thực"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Số giờ tối đa của phiên là hợp lệ phải là số nguyên."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Giờ hợp lệ"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "URL chuyển hướng là bắt buộc và phải chứa một URL hợp lệ."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL chuyển hướng"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Biểu thức chính quy xác thực là trường bắt buộc và phải chứa biểu thức chính "
+"quy hợp lệ."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Biểu thức chính quy xác thực"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr "Tên tham số đến là bắt buộc và chỉ chứa các ký tự chữ và số."
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Sử dụng mẫu sau để định cấu hình dịch vụ bên ngoài sẽ cung cấp xác nhận "
+"trạng thái đăng ký cho nội dung đăng ký của OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Cài đặt thuê bao đăng nhập một lần"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Cài đặt"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Plugin này ủy quyền kiểm tra thuê bao cho một hệ thống bên ngoài giống như "
+"SSO (Đăng nhập một lần). Khi một yêu cầu đến OJS với tên tham số đến được "
+"chỉ định - đây phải là tham số mà OJS không sử dụng nội bộ - plugin sẽ liên "
+"hệ với URL xác minh với giá trị của tham số được nối. Nếu kết quả của dịch "
+"vụ từ xa khớp với biểu thức chính quy định, người dùng sẽ được coi là hợp "
+"lệ. Nếu không, người dùng sẽ được chuyển hướng đến URL được chỉ định."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Plugin SSO thuê bao"
