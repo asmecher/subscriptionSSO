@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-09 08:32+0000\n"
+"PO-Revision-Date: 2021-02-11 14:53+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/mk_MK/>\n"
@@ -43,3 +43,33 @@ msgstr "Поставки"
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "Плагин за SSO претплата"
+
+#, fuzzy
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"This plugin delegates subscription checking to an external system for SSO ("
+"Single Sign On)-like behavior. When a request comes to OJS with the incoming "
+"parameter name specified -- this should be a parameter that OJS does not use "
+"internally -- the plugin will contact the verification URL with the value of "
+"the parameter appended. If the remote service's result matches the specified "
+"regular expression, the user will be considered valid. If not, the user will "
+"be redirected to the specified URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"Максималниот број на часови во кои сесијата е валидна мора да биде цел број."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Валидни часови"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "УРЛ за пренасочување е задолжително и мора да содржи валидно УРЛ."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "УРЛ за пренасочување"
+
+#, fuzzy
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"The verification regular expression is a required field and must contain a "
+"valid regular expression."
