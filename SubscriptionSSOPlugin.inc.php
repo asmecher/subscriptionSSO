@@ -21,8 +21,8 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			$this->addLocaleData();
-			HookRegistry::register('LoadHandler',array(&$this, 'loadHandlerCallback'));
-			HookRegistry::register('IssueAction::subscribedUser', array(&$this, 'subscribedUserCallback'));
+			HookRegistry::register('LoadHandler', [&$this, 'loadHandlerCallback']);
+			HookRegistry::register('IssueAction::subscribedUser', [&$this, 'subscribedUserCallback']);
 			return true;
 		}
 		return $success;
@@ -31,8 +31,8 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	/**
 	 * Callback when a handler is loaded. Used to check for the presence
 	 * of an incoming authentication, which needs to be verified.
-	 * @param $hookName string Hook name
-	 * @param $args array Hook arguments
+	 * @param string $hookName Hook name
+	 * @param array $args Hook arguments
 	 * @return boolean Hook return status
 	 */
 	function loadHandlerCallback($hookName, $args) {
@@ -72,14 +72,14 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	/**
 	 * Callback when a handler is loaded. Used to check for the presence
 	 * of an incoming authentication, which needs to be verified.
-	 * @param $hookName string Hook name
-	 * @param $args array Hook arguments
+	 * @param string $hookName Hook name
+	 * @param array $args Hook arguments
 	 * @return boolean Hook return status
 	 */
 	function subscribedUserCallback($hookName, $args) {
 		// Exclude the index and issue pages.
 		$request = Application::get()->getRequest();
-		if (in_array($request->getRequestedPage(), array('', 'index', 'search'))) return false;
+		if (in_array($request->getRequestedPage(), ['', 'index', 'search'])) return false;
 		// Capture issue galley requests, but not e.g. issue archive
 		if ($request->getRequestedPage() == 'issue' && count($request->getRequestedArgs()) != 2) return false;
 
@@ -102,7 +102,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		$router = $request->getRouter();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
-			$this->getEnabled()?array(
+			$this->getEnabled()?[
 				new LinkAction(
 					'settings',
 					new AjaxModal(
@@ -112,7 +112,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 					__('manager.plugins.settings'),
 					null
 				),
-			):array(),
+			]:[],
 			parent::getActions($request, $actionArgs)
 		);
 	}

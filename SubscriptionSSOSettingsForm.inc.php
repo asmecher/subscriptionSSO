@@ -23,8 +23,8 @@ class SubscriptionSSOSettingsForm extends Form {
 
 	/**
 	 * Constructor
-	 * @param $plugin object
-	 * @param $journalId int
+	 * @param object $plugin
+	 * @param int $journalId
 	 */
 	function __construct($plugin, $journalId) {
 		$this->_journalId = $journalId;
@@ -47,20 +47,20 @@ class SubscriptionSSOSettingsForm extends Form {
 		$journalId = $this->_journalId;
 		$plugin = $this->_plugin;
 
-		$this->_data = array(
+		$this->_data = [
 			'incomingParameterName' => $plugin->getSetting($journalId, 'incomingParameterName'),
 			'verificationUrl' => $plugin->getSetting($journalId, 'verificationUrl'),
 			'resultRegexp' => $plugin->getSetting($journalId, 'resultRegexp'),
 			'redirectUrl' => $plugin->getSetting($journalId, 'redirectUrl'),
 			'hoursValid' => $plugin->getSetting($journalId, 'hoursValid')
-		);
+		];
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('incomingParameterName', 'verificationUrl', 'resultRegexp', 'redirectUrl', 'hoursValid'));
+		$this->readUserVars(['incomingParameterName', 'verificationUrl', 'resultRegexp', 'redirectUrl', 'hoursValid']);
 	}
 
 	/**
