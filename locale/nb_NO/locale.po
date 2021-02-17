@@ -1,2 +1,72 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-28 11:53+0000\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-"
+"info@journals.uio.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
+"plugins/subscription-sso-plugin/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Det maksimale antallet timer sesjonen er gyldig må være et heltall."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Timer gyldig"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "Videresendings-URL må fylles inn og må være en gyldig URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Videresendings-URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Verifikasjons regular expression må fylles ut og må være et gyldig regular "
+"expression."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Verifikasjons Regular Expression"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "Verifikasjons-URL må fylles ut og må være en gyldig URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "Verifikasjons-URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Det innkommende parameternavnet er obligatorisk og må bare inneholde "
+"alfanumeriske tegn."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Innkommende paremeternavn"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Bruk følgende skjema for å konfigurere den eksterne tjenesten som gir "
+"bekreftelse på abonnementsstatus til OJS abonnementsinnhold."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Abonnements Single Sign-On-innstillinger"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Innstillinger"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Dette programtillegget delegerer abonnementskontroll til et eksternt system "
+"for SSO (Single Sign On)-lignende oppførsel. Når en forespørsel kommer til "
+"OJS med det angitte innkommende parameternavnet - dette skal være en "
+"parameter som OJS ikke bruker internt - vil programtillegget kontakte "
+"bekreftelses-URL-en med verdien av parameteren som er lagt til. Hvis "
+"resultatet av fjerntjenesten samsvarer med det spesifiserte regulære "
+"uttrykket, blir brukeren ansett som gyldig. Hvis ikke, vil brukeren bli "
+"omdirigert til den angitte URL-en."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Abonnements SSO-programtillegg"

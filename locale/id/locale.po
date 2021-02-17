@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-15 06:53+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/id_ID/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Jumlah maksimum lamanya sesi tetap valid harus bernilai integer."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Waktu Valid"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "URL pengalih diperlukan dan harus berupa URL yang valid."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Mengarahkan URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Pernyataan umum verifikasi adalah kolom wajib dan harus mengandung "
+"pernyataan umum verifikasi  yang valid."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Pernyataan Umum Verifikasi"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "URL verifikasi diperlukan dan harus berupa URL yang valid."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL Verifikasi"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Nama parameter ini diperlukan dan hanya boleh terdiri dari karakter "
+"alfanumerik."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nama parameter yang masuk"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Gunakan formulir berikut untuk mengkonfigurasi layanan eksternal yang akan "
+"memberikan konfirmasi status langganan ke konten langganan OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Pengaturan Langganan Single Sign-On"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Pengaturan"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Plugin ini mengalihkan pemeriksaan langganan kepada sistem eksternal untuk "
+"perilaku menyerupai SSO (Single Sign-On). Ketika ada permintaan masuk ke OJS "
+"dengan parameter tertentu-- parameter yang belum digunakan OJS secara "
+"internal -- plugin akan menghubungi URL verifikasi dengan nilai parameter "
+"yang ditambahkan. Jika hasil layanan jarak jauh cocok dengan ekspresi "
+"reguler yang ditentukan, pengguna akan dianggap valid. Jika tidak, pengguna "
+"akan diarahkan ke URL yang ditentukan."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Plugin Langgan SSO"
