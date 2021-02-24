@@ -1,2 +1,74 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-02-25 04:54+0000\n"
+"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/ru_RU/>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"Максимальное число часов, которое сессия считается валидной. Должно быть "
+"целым числом."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Период валидности (в часах)"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "URL перенаправления обязателен и должен содержать корректный URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL перенаправления"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Регулярное выражение для верификации является обязательным полем и должно "
+"содержать корректное регулярное выражение."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Регулярное выражение для верификации"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "URL верификации обязателен и должен содержать корректный URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL верификации"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Имя входящего параметра обязательно и должно состоять только из букв "
+"латинского алфавита и цифр."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Имя входящего параметра"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Используйте следующую форму для настройки внешней службы, которая будет "
+"подтверждать статус подписки на подписной контент OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Настройки SSO для подписки"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Плагин делегирует проверку подписки внешней системе, реализуя поведение "
+"аналогичное SSO (Single Sign On). Когда в OJS поступает запрос с "
+"определённым именем входящего параметра (это должен быть параметр, который "
+"OJS не использует внутри себя), плагин будет обращаться на URL верификации, "
+"добавляя значение этого параметра. Если ответ этой удалённой службы "
+"соответствует заданному регулярному выражению, пользователь будет считаться "
+"корректным. Если не соответствует, то пользователь будет перенаправлен на "
+"заданный URL."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Плагин «SSO для подписки»"
