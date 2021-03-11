@@ -1,2 +1,73 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-12 09:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"O número máximo de horas de vixencia da sesión debe ser un número enteiro."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Horas válidas"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "O URL de redirección é obrigatorio e debe conter un URL válido."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL de redirección"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"A expresión regular de verificación é un campo obrigatorio e debe conter "
+"unha expresión regular válida."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Expresión regular de verificación"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "O URL de verificación é obrigatorio e debe conter un URL válido."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL de verificación"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"O nome do parámetro entrante é obrigatorio e debe conter só caracteres "
+"alfanuméricos."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nome do parámetro entrante"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Utilice o seguinte formulario para configurar o servizo externo que "
+"proporcionará a confirmación do estado da subscrición ao contido de "
+"subscrición de OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Configuración da subscrición SSO (inicio de sesión único)"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Axustes"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Este complemento delega a verificación da subscrición a un sistema externo "
+"semellante ao SSO (Single Sign On, inicio de sesión único). Cando unha "
+"solicitude chega a OJS co nome do parámetro entrante especificado -este "
+"debería ser un parámetro que OJS non usa internamente- o complemento "
+"contactará co URL de verificación co valor do parámetro engadido. Se o "
+"resultado do servizo remoto coincide coa expresión regular especificada, o "
+"usuario/a considerarase válido/a. Se non, o usuario/a será redirixido/a ao "
+"URL especificado."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Complemento de subscrición SSO"
