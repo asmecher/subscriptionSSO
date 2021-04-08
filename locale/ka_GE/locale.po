@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 11:55+0000\n"
+"PO-Revision-Date: 2021-04-09 08:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/ka_GE/>\n"
@@ -13,3 +13,58 @@ msgstr ""
 
 msgid "plugins.generic.subscriptionSSO.settings"
 msgstr "პარამეტრები"
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "გამოწერის SSO პლაგინი"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"ეს პლაგინი გადასცემს შემოწმებას გარე სისტემას SSO (Single Sign On) მსგავსი "
+"ქცევისთვის. როდესაც მოთხოვნა მოდის OJS- ში, მითითებულია შემომავალი "
+"პარამეტრის სახელი - ეს უნდა იყოს პარამეტრი, რომელსაც OJS არ იყენებს "
+"შინაგანად - დანამატი დაუკავშირდება დამადასტურებელ URL- ს თანდართული "
+"პარამეტრის მნიშვნელობით. თუ დისტანციური სერვისის შედეგი ემთხვევა მითითებულ "
+"რეგულარულ გამოხატვას, მომხმარებელი მართებულად ჩაითვლება. თუ არა, "
+"მომხმარებელი გადამისამართდება მითითებულ URL- ზე."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "გამოწერის ერთი შესვლის პარამეტრები"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"გამოიყენეთ შემდეგი ფორმა გარე სერვისის კონფიგურაციისთვის, რომელიც "
+"უზრუნველყოფს OJS-ის სააბონენტო შინაარსის გამოწერის სტატუსის დადასტურებას."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "შემომავალი პარამეტრის სახელი"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"შემომავალი პარამეტრის სახელი აუცილებელია და უნდა შეიცავდეს მხოლოდ "
+"ალფანუმერულ სიმბოლოებს."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "დადასტურების URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "გადამისამართების URL აუცილებელია და უნდა შეიცავდეს სწორ URL-ს."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "რეგულარული გამოხატვის შემოწმება"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"გადამოწმების რეგულარული გამოხატვა არის სავალდებულო ველი და უნდა შეიცავდეს "
+"მართებულ რეგულარულ გამოხატვას."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "გადამისამართების URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "გადამისამართების URL აუცილებელია და უნდა შეიცავდეს სწორ URL-ს."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "მოქმედი საათები"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "სესიის მოქმედი საათების მაქსიმალური რაოდენობა უნდა იყოს მთელი რიცხვი."
