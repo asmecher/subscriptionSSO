@@ -1,8 +1,48 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-26 00:23+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL pengesahan"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Nama parameter masuk diperlukan dan mesti mengandungi aksara alfanumerik "
+"sahaja."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nama parameter masuk"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Gunakan borang berikut untuk mengkonfigurasi perkhidmatan luaran yang akan "
+"memberikan pengesahan status langganan ke kandungan langganan OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Tetapan Log Masuk Tunggal Langganan"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Tetapan"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Pluigin ini mewakilkan semakan langganan kepada sistem luaran untuk tingkah "
+"laku seperti SSO (Single Sign On). Apabila permintaan datang kepada OJS "
+"dengan nama parameter masuk ditentukan -- ini harus menjadi parameter yang "
+"OJS tidak gunakan secara dalaman -- pemalam akan menghubungi URL pengesahan "
+"dengan nilai parameter yang dilampirkan. Jika keputusan perkhidmatan jauh "
+"sepadan dengan ungkapan biasa yang ditentukan, pengguna akan dianggap sah. "
+"Jika tidak, pengguna akan diubah hala ke URL yang ditentukan."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Langganan SSO Plugin"
