@@ -1,7 +1,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-26 00:23+0000\n"
+"PO-Revision-Date: 2021-10-26 08:07+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/ms/>\n"
@@ -46,3 +46,26 @@ msgstr ""
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "Langganan SSO Plugin"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Bilangan maksimum jam sesi sah mestilah integer."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Waktu Sah"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "URL ubah hala diperlukan dan mesti mengandungi URL yang sah."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Ubah hala URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Pengesahan ungkapan biasa ialah medan yang diperlukan dan mesti mengandungi "
+"ungkapan biasa yang sah."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Pengesahan Ungkapan Biasa"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "URL pengesahan diperlukan dan mesti mengandungi URL yang sah."
