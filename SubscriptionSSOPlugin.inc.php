@@ -91,7 +91,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		$result =& $args[4]; // Reference required
 		if ($result) return false; // If a subscription has already been established, respect that
 
-		$result = isset($_SESSION['subscriptionSSOTimestamp']) && $_SESSION['subscriptionSSOTimestamp'] + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) > time();
+		$result = isset($_SESSION['subscriptionSSOTimestamp']) && $_SESSION['subscriptionSSOTimestamp'] + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) + 1 >= time();
 		if (!$result) {
 			// If we're not subscribed, redirect.
 			$request->redirectUrl($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl()));
