@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-19 15:42+0000\n"
-"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"PO-Revision-Date: 2021-04-09 08:55+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/fi_FI/>\n"
 "Language: fi_FI\n"
@@ -16,3 +16,6 @@ msgstr "Tarkistus URL on vaadittu tieto ja siinä pitää olla kelvollinen URL."
 
 msgid "plugins.generic.subscriptionSSO.settings"
 msgstr "Asetukset"
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "SSO tilaukset -lisäosa"
