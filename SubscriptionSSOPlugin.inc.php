@@ -86,6 +86,13 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		// Permit an abstract view.
 		if ($request->getRequestedPage() == 'article' && $request->getRequestedOp() == 'view' && count($request->getRequestedArgs())==1) return false;
 
+		$articleId = $args[3];
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$submission = $submissionDao->getById($articleId);
+
+		// Permit access to open access articles.
+		if ($submission && $submission->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN) return false;
+
 		$journal = $args[1];
 
 		$result =& $args[4]; // Reference required
@@ -159,4 +166,3 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		return __('plugins.generic.subscriptionSSO.description');
 	}
 }
-
