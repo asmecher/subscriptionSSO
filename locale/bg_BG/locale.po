@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-01 09:51+0000\n"
+"PO-Revision-Date: 2022-04-03 12:57+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
 "subscription-sso-plugin/bg_BG/>\n"
@@ -14,3 +14,64 @@ msgstr ""
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "Добавка (плъгин) за SSO абонамент"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"Максималният брой часове, през които сесията е валидна, трябва да бъде цяло "
+"число."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Валидни часове"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr ""
+"URL адресът за пренасочване е задължителен и трябва да съдържа валиден URL "
+"адрес."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL за пренасочване"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Регулярният израз за проверка е задължително поле и трябва да съдържа "
+"валиден регулярен израз."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Регулярен израз за проверка"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr ""
+"URL адресът за проверка е задължителен и трябва да съдържа валиден URL адрес."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL за проверка"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Името на входящия параметър е задължително и трябва да съдържа само буквено-"
+"цифрови знаци."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Име на входящ параметър"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Използвайте следния формуляр, за да конфигурирате външната услуга, която ще "
+"предостави потвърждение на състоянието на абонамента към съдържанието на "
+"абонамента на OJS."
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Настройки за Single Sign-On"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Тази добавка (плъгин) делегира проверката на абонамента на външна система "
+"SSO (Single Sign On). Когато заявка дойде до OJS с посочено име на входящия "
+"параметър – това трябва да е параметър, който OJS не използва вътрешно – "
+"плъгинът ще се свърже с URL за проверка с добавена стойност на параметъра. "
+"Ако резултатът от отдалечената услуга съвпада с посочения регулярен израз, "
+"потребителят ще се счита за валиден. Ако не, потребителят ще бъде пренасочен "
+"към посочения URL адрес."
