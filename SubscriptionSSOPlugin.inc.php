@@ -10,7 +10,9 @@
  * Plugin to defer subscription checks to an external system.
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\AjaxModal;
 
 class SubscriptionSSOPlugin extends GenericPlugin {
 	/**
@@ -103,7 +105,6 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 	 */
 	function getActions($request, $actionArgs) {
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
 			$this->getEnabled()?[
 				new LinkAction(
