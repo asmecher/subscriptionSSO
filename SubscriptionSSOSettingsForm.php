@@ -11,7 +11,10 @@
  * @brief Form for journal managers to modify subscription SSO plugin settings
  */
 
+namespace APP\plugins\generic\subscriptionSSO;
+
 use PKP\form\Form;
+use APP\template\TemplateManager;
 
 class SubscriptionSSOSettingsForm extends Form {
 
@@ -33,10 +36,9 @@ class SubscriptionSSOSettingsForm extends Form {
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		$this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'incomingParameterName', 'required', 'plugins.generic.subscriptionSSO.settings.incomingParameterName.required', '/^[a-zA-Z0-9\/._-]+$/'));
-		$this->addCheck(new \PKP\form\validation\FormValidatorURL($this, 'verificationUrl', 'required', 'plugins.generic.subscriptionSSO.settings.verificationUrl.required'));
+		$this->addCheck(new \PKP\form\validation\FormValidatorUrl($this, 'verificationUrl', 'required', 'plugins.generic.subscriptionSSO.settings.verificationUrl.required'));
 		$this->addCheck(new \PKP\form\validation\FormValidator($this, 'resultRegexp', 'required', 'plugins.generic.subscriptionSSO.settings.resultRegexp.required'));
-		$this->addCheck(new \PKP\form\validation\FormValidatorURL($this, 'redirectUrl', 'required', 'plugins.generic.subscriptionSSO.settings.redirectUrl.required'));
-		$this->addCheck(new \PKP\form\validation\FormValidatorURL($this, 'redirectUrl', 'required', 'plugins.generic.subscriptionSSO.settings.redirectUrl.required'));
+		$this->addCheck(new \PKP\form\validation\FormValidatorUrl($this, 'redirectUrl', 'required', 'plugins.generic.subscriptionSSO.settings.redirectUrl.required'));
 		$this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'hoursValid', 'required', 'plugins.generic.subscriptionSSO.settings.hoursValid.required', '/^[0-9]+$/'));
 	}
 

@@ -10,9 +10,16 @@
  * Plugin to defer subscription checks to an external system.
  */
 
+namespace APP\plugins\generic\subscriptionSSO;
+
 use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\AjaxModal;
+use PKP\config\Config;
+use PKP\plugins\Hook;
+use APP\template\TemplateManager;
+use PKP\core\JSONMessage;
+use APP\core\Application;
 
 class SubscriptionSSOPlugin extends GenericPlugin {
 	/**
@@ -23,8 +30,8 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			$this->addLocaleData();
-			HookRegistry::register('LoadHandler', [&$this, 'loadHandlerCallback']);
-			HookRegistry::register('IssueAction::subscribedUser', [&$this, 'subscribedUserCallback']);
+			Hook::add('LoadHandler', [&$this, 'loadHandlerCallback']);
+			Hook::add('IssueAction::subscribedUser', [&$this, 'subscribedUserCallback']);
 			return true;
 		}
 		return $success;
@@ -130,7 +137,6 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$this->import('SubscriptionSSOSettingsForm');
 				$form = new SubscriptionSSOSettingsForm($this, $context->getId());
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
