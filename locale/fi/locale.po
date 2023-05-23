@@ -1,15 +1,16 @@
+# Antti-Jussi Nygård <ajnyga@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-09 08:55+0000\n"
+"PO-Revision-Date: 2023-05-24 07:49+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/"
-"subscription-sso-plugin/fi_FI/>\n"
-"Language: fi_FI\n"
+"subscription-sso-plugin/fi/>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
 msgstr "Tarkistus URL on vaadittu tieto ja siinä pitää olla kelvollinen URL."
@@ -19,3 +20,54 @@ msgstr "Asetukset"
 
 msgid "plugins.generic.subscriptionSSO.name"
 msgstr "SSO tilaukset -lisäosa"
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Tilauksen kertakirjautumisasetukset"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Määritä seuraavalla lomakkeella ulkoinen palvelu, joka antaa OJS:lle "
+"vahvistuksen tilauksen tilasta."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Saapuvan parametrin nimi"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Saapuvan parametrin nimi vaaditaan ja saa sisältää vain aakkosnumeerisia "
+"merkkejä."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "Vahvistuksen URL-osoite"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Vahvistuksen säännöllinen lauseke"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Vahvistuksen säännöllinen lauseke on pakollinen kenttä, ja sen on "
+"sisällettävä kelvollinen säännöllinen lauseke."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Uudelleenohjauksen URL-osoite"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr ""
+"Uudelleenohjauksen URL-osoite on pakollinen, ja sen on sisällettävä "
+"kelvollinen URL-osoite."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Tuntia voimassa"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Istunnon voimassaoloajan enimmäismäärän on oltava kokonaisluku."
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Tämä lisäosa siirtää tilausten tarkistuksen ulkoiseen järjestelmään SSO:n ("
+"Single Sign On) kaltaisella ratkaisulla. Kun OJS:lle tulee pyyntö, jossa on "
+"määritetty saapuvan parametrin nimi - tämän pitäisi olla parametri, jota OJS "
+"ei käytä sisäisesti - lisäosa ottaa yhteyttä tarkistusta varten määritettyyn "
+"URL-osoitteeseen, johon on liitetty parametrin arvo. Jos etäpalvelun tulos "
+"vastaa määritettyä säännöllistä lauseketta, käyttäjä katsotaan "
+"kelvolliseksi. Jos ei, käyttäjä ohjataan määritettyyn URL-osoitteeseen."
