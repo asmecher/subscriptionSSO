@@ -2,7 +2,7 @@
 # José Carvalho <jcarvalho@keep.pt>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-05-30 10:49+0000\n"
+"PO-Revision-Date: 2023-06-13 08:49+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "plugins/subscription-sso-plugin/pt_PT/>\n"
@@ -27,7 +27,6 @@ msgstr ""
 "especificada, o utilizador será considerado válido. Caso contrário, o "
 "utilizador será redirecionado para o URL especificado."
 
-#, fuzzy
 msgid "plugins.generic.subscriptionSSO.settings"
 msgstr "Configurações"
 
