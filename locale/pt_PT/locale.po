@@ -1,0 +1,74 @@
+# Weblate Admin <alec@smecher.bc.ca>, 2023.
+# José Carvalho <jcarvalho@keep.pt>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-13 08:49+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
+"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
+"plugins/subscription-sso-plugin/pt_PT/>\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "Plugin de subscrição SSO (Single Sign On / Login Único)"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Este plugin delega a verificação de assinatura a um sistema externo para um "
+"comportamento semelhante ao SSO (Single Sign On/ Login Único). Quando uma "
+"solicitação é enviada ao OJS com o nome do parâmetro de entrada especificado "
+"— este deve ser um parâmetro que o OJS não usa internamente — o plugin "
+"entrará em contato com o URL de verificação com o valor do parâmetro "
+"anexado. Se o resultado do serviço remoto corresponder à expressão regular "
+"especificada, o utilizador será considerado válido. Caso contrário, o "
+"utilizador será redirecionado para o URL especificado."
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Configurações"
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Configurações da subscrição Single Sign-On (Login Único)"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Use o formulário para configurar o serviço externo que fornecerá a "
+"confirmação do status da subscrição para o conteúdo assinado no OJS."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Nome do parâmetro recebido"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"O nome do parâmetro recebido é obrigatório e deve conter apenas caracteres "
+"alfanuméricos."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "URL de verificação"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "O URL de verificação é obrigatório e deve conter um URL válido."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Verificação da Expressão Regular"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"A verificação da expressão regular é um campo obrigatório e deve conter uma "
+"expressão regular válida."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "URL de redirecionamento"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "O URL de redirecionamento é obrigatório e deve conter um URL válido."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Horas Válidas"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr ""
+"O número máximo de horas em que a sessão é válida deve ser um número inteiro."

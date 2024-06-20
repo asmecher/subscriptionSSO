@@ -1,0 +1,69 @@
+# M. Ali <vorteem@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-08-12 02:06+0000\n"
+"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "إعدادات الاشتراك عبر تسجيل الدخول الواحد"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"استعمل النموذج الآتي لتهيئة الخدمة الخارجية التي توفر التأكيد لحالة الاشتراك "
+"إلى محتوى الاشتراك في نظام المجلات المفتوحة."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "اسم المعامل الوارد"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"اسم المعامل الوارد مطلوب حتمًا وينبغي أن يحتوي فقط على محارف نصية ورقمية."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "عنوان رابط التحقق"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "التعبير الاعتيادي للتحقق"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr "التعبير الاعتيادي للتحقق مطلوب حتمًا وينبغي أن يكون تعبير اعتيادي صالح."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "عنوان رابط إعادة التوجيه"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "عنوان رابط إعادة التوجيه مطلوب حتمًا وينبغي أن يكون عنوان رابط صالح."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "ساعات الصلاحية"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "أقصى عدد من الساعات لصلاحية الجلسة ينبغي أن يكون عددًا صحيحًا."
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "إضافة الاشتراك SSO"
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"هذه الإضافة تتوسط في عملية التحقق عند طلب الاشتراك المبني على استعمال أنظمة "
+"مصادقة خارجية SSO ذات سلوك مماثل لـ(تسجيل دخول واحد). عندما يرد الطلب إلى "
+"نظام المجلات المفتوحة متضمنًا معاملاً ذي اسم معين -- ينبغي أن يكون معاملاً "
+"لا يستعمله نظام المجلات المفتوحة داخليًا -- ستقوم الإضافة بالتواصل مع رابط "
+"التحقق مع إلحاق المعامل بالرابط. إذا طابقت النتيجة المرسلة من الخدمة "
+"الخارجية التعبير الاعتيادي المحدد، سيتم اعتبار المستخدم مفوضًا. إذا لم "
+"تتطابق النتيجة، سيتم توجيه المستخدم إلى الرابط المحدد."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "عنوان رابط التحقق مطلوب حتمًا وينبغي أن يكون عنوان رابط صالح."
