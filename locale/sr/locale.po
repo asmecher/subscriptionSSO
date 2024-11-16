@@ -1,3 +1,72 @@
 # Ana Jelenković <jelenkovicana@hotmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-11-17 16:40+0000\n"
+"Last-Translator: Ana Jelenković <jelenkovicana@hotmail.com>\n"
+"Language-Team: Serbian <http://translate.pkp.sfu.ca/projects/plugins/"
+"subscription-sso-plugin/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.subscriptionSSO.name"
+msgstr "SSO dodatak za pretplatu"
+
+msgid "plugins.generic.subscriptionSSO.settings"
+msgstr "Podešavanja"
+
+msgid "plugins.generic.subscriptionSSO.subscriptionSSOSettings"
+msgstr "Podešavanje jednokratne pretplate"
+
+msgid "plugins.generic.subscriptionSSO.settings.description"
+msgstr ""
+"Koristi sledeći obrazac za podešavanje spoljne usluge koja će da obezbedi "
+"potvrdu statusa pretplate za sadržaj pretplate OJS-a."
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName"
+msgstr "Ime dolaznog parametra"
+
+msgid "plugins.generic.subscriptionSSO.settings.incomingParameterName.required"
+msgstr ""
+"Naziv dolaznog parametra je obavezan i mora da sadrži samo alfanumeričke "
+"karaktere."
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl"
+msgstr "Verfikacija URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.verificationUrl.required"
+msgstr "Verifikacija URL-a je obaveza i mora da sadrži validan URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp"
+msgstr "Regularni izraz verifikacije"
+
+msgid "plugins.generic.subscriptionSSO.settings.resultRegexp.required"
+msgstr ""
+"Regularni izraz za verifikaciju je obavezno polje i mora da sadrži važeći "
+"regularni izraz."
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl"
+msgstr "Preusmeravanje URL"
+
+msgid "plugins.generic.subscriptionSSO.settings.redirectUrl.required"
+msgstr "Preusmeravanje URL je obavezno i mora da sadrži važeći URL."
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid"
+msgstr "Važeći sati"
+
+msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
+msgstr "Maksimalan broj sati tokom kojih je sesija važeća mora biti ceo broj."
+
+msgid "plugins.generic.subscriptionSSO.description"
+msgstr ""
+"Ovaj dodatak delegira proveru pretplate na spoljni sistem za ponašanje nalik "
+"na SSO (Single Sign On). Kada zahtev dođe u OJS sa navedenim imenom dolaznog "
+"parametra – ovo bi trebalo da bude parametar koji OJS ne koristi interno – "
+"dodatak će kontaktirati verifikacioni URL sa dodanom vrednošću parametra. "
+"Ako se rezultat udaljene usluge podudara sa navedenim regularnim izrazom, "
+"korisnik će se smatrati važećim. Ako nije, korisnik će biti preusmeren na "
+"navedenu URL adresu."
