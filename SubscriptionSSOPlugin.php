@@ -18,7 +18,8 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\config\Config;
 use PKP\plugins\Hook;
 use APP\facades\Repo;
-use PKP\db\DAORegistry;
+use APP\issue\IssueAction;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
 use APP\core\Application;
@@ -34,6 +35,7 @@ class SubscriptionSSOPlugin extends GenericPlugin {
             $this->addLocaleData();
             Hook::add('LoadHandler', $this->loadHandlerCallback(...));
             Hook::add('IssueAction::subscribedUser', $this->subscribedUserCallback(...));
+            Hook::add('Templates::Common::Sidebar', $this->sidebarCallback(...));
             return true;
         }
         return $success;
@@ -102,11 +104,94 @@ class SubscriptionSSOPlugin extends GenericPlugin {
 
         $journal = $args[1];
         $result = $request->getSession()->get('subscriptionSSOTimestamp', 0) + ($this->getSetting($journal->getId(), 'hoursValid') * 3600) + 1 >= time();
-        if (!$result) {
-            // If we're not subscribed, redirect.
-            $request->redirectUrl($this->getSetting($journal->getId(), 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl()));
+        if (!$result && !$this->allowIndividualPurchase($journal->getId())) {
+            $request->redirectUrl($this->getLoginRedirectUrl($request, $journal->getId()));
         }
         return Hook::CONTINUE;
+    }
+
+    /**
+     * Individual article and issue sales stay off until a journal turns them on.
+     */
+    function allowIndividualPurchase(int $journalId): bool
+    {
+        return (bool) $this->getSetting($journalId, 'allowIndividualPurchase');
+    }
+
+    /**
+     * External login URL, including the URL to return to after authentication.
+     */
+    function getLoginRedirectUrl($request, int $journalId): string
+    {
+        return $this->getSetting($journalId, 'redirectUrl') . '?redirectUrl=' . urlencode($request->getRequestUrl());
+    }
+
+    /**
+     * Prepend the subscription link. It is not a sidebar block the journal can reorder.
+     */
+    function sidebarCallback(string $hookName, array $args): bool
+    {
+        $request = Application::get()->getRequest();
+        $journal = $request->getJournal();
+
+        if (!$journal || !$this->allowIndividualPurchase($journal->getId())) {
+            return Hook::CONTINUE;
+        }
+
+        if (!$this->getSetting($journal->getId(), 'redirectUrl')) {
+            return Hook::CONTINUE;
+        }
+
+        if (!$this->showsSubscriptionContent($request, $journal)) {
+            return Hook::CONTINUE;
+        }
+
+        $templateMgr = $args[1];
+        $templateMgr->assign('subscriptionSSOLoginUrl', $this->getLoginRedirectUrl($request, $journal->getId()));
+        $args[2] = $templateMgr->fetch($this->getTemplateResource('block.tpl')) . ($args[2] ?? '');
+
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * True when this request is showing an article or issue that requires a subscription.
+     */
+    function showsSubscriptionContent($request, $journal): bool
+    {
+        $page = $request->getRequestedPage();
+        $op = $request->getRequestedOp();
+        $args = $request->getRequestedArgs();
+        $issueAction = new IssueAction();
+
+        if (
+            (in_array($page, ['', 'index']) && in_array($op, ['', 'index']))
+            || ($page == 'issue' && $op == 'current')
+        ) {
+            $issue = Repo::issue()->getCurrent($journal->getId());
+            return $issue && $issueAction->subscriptionRequired($issue, $journal);
+        }
+
+        if ($page == 'article' && $op == 'view' && isset($args[0])) {
+            $submission = Repo::submission()->getByBestId((string) $args[0], $journal->getId());
+            $publication = $submission ? $submission->getCurrentPublication() : null;
+
+            if (!$publication || $publication->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN) {
+                return false;
+            }
+
+            $issueId = $publication->getData('issueId');
+            $issue = $issueId ? Repo::issue()->get($issueId) : null;
+
+            return $issue && $issueAction->subscriptionRequired($issue, $journal);
+        }
+
+        if ($page == 'issue' && $op == 'view' && isset($args[0])) {
+            $issue = Repo::issue()->getByBestId((string) $args[0], $journal->getId());
+
+            return $issue && $issueAction->subscriptionRequired($issue, $journal);
+        }
+
+        return false;
     }
 
     /**

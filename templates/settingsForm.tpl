@@ -31,6 +31,9 @@
 			{fbvElement type="text" id="redirectUrl" name="redirectUrl" value=$redirectUrl label="plugins.generic.subscriptionSSO.settings.redirectUrl" required=true}
 			{fbvElement type="text" id="hoursValid" name="hoursValid" value=$hoursValid label="plugins.generic.subscriptionSSO.settings.hoursValid" required=true}
 		{/fbvFormSection}
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" id="allowIndividualPurchase" name="allowIndividualPurchase" value="1" checked=$allowIndividualPurchase|compare:true label="plugins.generic.subscriptionSSO.settings.allowIndividualPurchase"}
+		{/fbvFormSection}
 	{/fbvFormArea}
 
 	{fbvFormButtons}

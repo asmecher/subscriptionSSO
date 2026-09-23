@@ -52,7 +52,8 @@ class SubscriptionSSOSettingsForm extends Form {
             'verificationUrl' => $plugin->getSetting($journalId, 'verificationUrl'),
             'resultRegexp' => $plugin->getSetting($journalId, 'resultRegexp'),
             'redirectUrl' => $plugin->getSetting($journalId, 'redirectUrl'),
-            'hoursValid' => $plugin->getSetting($journalId, 'hoursValid')
+            'hoursValid' => $plugin->getSetting($journalId, 'hoursValid'),
+            'allowIndividualPurchase' => $plugin->allowIndividualPurchase($journalId),
         ];
     }
 
@@ -61,7 +62,7 @@ class SubscriptionSSOSettingsForm extends Form {
      */
     function readInputData()
     {
-        $this->readUserVars(['incomingParameterName', 'verificationUrl', 'resultRegexp', 'redirectUrl', 'hoursValid']);
+        $this->readUserVars(['incomingParameterName', 'verificationUrl', 'resultRegexp', 'redirectUrl', 'hoursValid', 'allowIndividualPurchase']);
     }
 
     /**
@@ -87,6 +88,7 @@ class SubscriptionSSOSettingsForm extends Form {
         $plugin->updateSetting($journalId, 'resultRegexp', $this->getData('resultRegexp'), 'string');
         $plugin->updateSetting($journalId, 'redirectUrl', $this->getData('redirectUrl'), 'string');
         $plugin->updateSetting($journalId, 'hoursValid', $this->getData('hoursValid'), 'string');
+        $plugin->updateSetting($journalId, 'allowIndividualPurchase', (bool) $this->getData('allowIndividualPurchase'), 'bool');
 
         parent::execute(...$functionArgs);
     }

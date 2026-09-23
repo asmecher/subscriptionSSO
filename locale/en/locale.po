@@ -66,3 +66,12 @@ msgstr "Hours Valid"
 
 msgid "plugins.generic.subscriptionSSO.settings.hoursValid.required"
 msgstr "The maximum number of hours the session is valid must be an integer."
+
+msgid "plugins.generic.subscriptionSSO.settings.allowIndividualPurchase"
+msgstr "Enable purchase of individual articles or issues in OJS"
+
+msgid "plugins.generic.subscriptionSSO.block.displayName"
+msgstr "Subscription SSO"
+
+msgid "plugins.generic.subscriptionSSO.block.login"
+msgstr "Sign in with your subscription"
